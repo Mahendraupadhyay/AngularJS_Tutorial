@@ -5,10 +5,9 @@
 var myApp = angular
     .module("MyModule", [])
     .controller("MyController", function ($scope) {
-        var employee = {
-            firstName: "Mahendra",
-            lastName: "Upadhyay",
-            gender: "Male"
+        var country = {
+            name: "India",
+            flag: "/Image/pexels-photo-248797.jpeg"
         };
-        $scope.employee = employee;
+        $scope.country = country;
     });

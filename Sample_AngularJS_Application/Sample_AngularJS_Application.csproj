@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HtmlPage1.html" />
+    <Content Include="Image\pexels-photo-248797.jpeg" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />

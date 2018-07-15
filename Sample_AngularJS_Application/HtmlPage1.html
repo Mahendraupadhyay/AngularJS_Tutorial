@@ -9,9 +9,25 @@
 </head>
 <body >
     <div ng-controller="MyController">
-        <div>First Name: {{employee.firstName}}</div>
-        <div>Last Name: {{employee.lastName}}</div>
-        <div>Gender: {{employee.gender}}</div>
+        <div>
+            <input type="text" ng-model="country.name" />
+        </div>
+        <div>
+            Name: {{country.name}}
+        </div>
+        <div>
+            <input type="text" ng-model="newModel" />
+        </div>
+        <div>
+            <br /><br />
+             {{newModel}}  <!--newModel property is not associated with any model so at the very first time
+            view will not show anything in place of this prop. But as we have associated an input model with
+            ng-model with this property so as soon as user will type anythig in txtbox angular will create
+            a property called newModel and display it in View.--> 
+        </div>
+        <div>
+            <img ng-src={{country.flag}} alt={{country.Name+ ' Flag'}} />
+        </div>
     </div>
 </body>
 </html> 
