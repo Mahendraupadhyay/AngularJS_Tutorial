@@ -2,8 +2,13 @@
 
 var myApp = angular.module("MyModule", []); /*Created a module*/
 
-var myController = function ($scope) {    /*Created a controller*/
-    $scope.message = "Angular Tutorial"
+var myController = function ($scope) {  
+    var employee = {
+        fisrtName:"Mahendra",
+        lastName:"Upadhyay",
+        gender:"Male"
+    };
+    $scope.employee = employee;
 };
 
 myApp.controller("MyController", myController);  /*Register contoller with module*/

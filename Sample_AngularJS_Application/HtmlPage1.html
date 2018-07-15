@@ -2,18 +2,16 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="MyModule">
 <head>
-    <script src="http://localhost:51019/Scripts/angular.min.js"></script>
+    <script src="http://localhost:51019/Scripts/angular.js"></script>
     <script src="Scripts/CustomScript.js"></script>
     <meta charset="utf-8" />
     <title></title>
 </head>
-<body ng-controller="MyController">
-    {{message}}
-    10+20={{10+20}}
-    {{1==1}}
-    {{1==2}}
-    {{"S"=="A"}}
-    <br>
-    {{['David','Mark','Sara'][1]}}
+<body >
+    <div ng-controller="MyController">
+        <div>First Name: {{employee.fisrtName}}</div>
+        <div>Last Name: {{employee.lastName}}</div>
+        <div>Gender: {{employee.gender}}</div>
+    </div>
 </body>
 </html> 
