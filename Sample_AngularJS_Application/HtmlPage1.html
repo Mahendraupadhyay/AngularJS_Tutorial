@@ -9,25 +9,37 @@
 </head>
 <body >
     <div ng-controller="MyController">
-        <div>
-            <input type="text" ng-model="country.name" />
-        </div>
-        <div>
-            Name: {{country.name}}
-        </div>
-        <div>
-            <input type="text" ng-model="newModel" />
-        </div>
-        <div>
-            <br /><br />
-             {{newModel}}  <!--newModel property is not associated with any model so at the very first time
-            view will not show anything in place of this prop. But as we have associated an input model with
-            ng-model with this property so as soon as user will type anythig in txtbox angular will create
-            a property called newModel and display it in View.--> 
-        </div>
-        <div>
-            <img ng-src={{country.flag}} alt={{country.Name+ ' Flag'}} />
-        </div>
+        <!--<div>
+            <table>    Table view using ng-repeat
+                <thead>
+                    <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="employee in employees">
+                        <td>{{employee.name}}</td>
+                        <td>{{employee.gender}}</td>
+                        <td>{{employee.Salary}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>-->
+      <div>
+           <!--Nested ng-repeat sample using unordered List-->
+          <ul>
+              <li ng-repeat="country in countries" ng-init="parentIndex=$index">
+                  {{country.name}} Index: {{$index}}
+                  <ul>
+                      <li ng-repeat="city in country.cities">
+                          {{city.name}} - Parent Index using ng-Init: {{parentIndex}} Parent Index using $Parent property:{{$parent.$index}} Child Index: {{$index}}
+                      </li>
+                  </ul>
+              </li>
+          </ul>
+      </div>
     </div>
 </body>
 </html> 
